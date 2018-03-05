@@ -26,8 +26,7 @@
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-uglify": "^1.5.3",
     "handlebars": "^4.0.5",
-    "jquery": "^2.2.4",
-    "jquery-jcaret": "^1.0.3",
-    "jquery-ui": "~1.10.5"
+    "jquery": "^3.3.1",
+    "jquery-ui": "^1.12.1"
   }
 }
