@@ -15,15 +15,14 @@ gulp.task("build:html", function () {
   return gulp.src("./src/index.html").pipe(gulp.dest("./dist"));
 });
 
+gulp.task("build:css", function () {
+  return gulp.src("./src/css/index.css").pipe(gulp.dest("./dist/css"));
+});
+
 gulp.task("build:js", function () {
   return gulp
-    .src("./src/connect.js")
+    .src("./src/js/index.js")
     .pipe(sourcemaps.init())
-    .pipe(
-    preprocess({
-      context: scriptConfig
-    })
-    )
     .pipe(uglify())
     .pipe(
     sourcemaps.write(".", {
@@ -31,49 +30,12 @@ gulp.task("build:js", function () {
       sourceRoot: "http://localhost:8000/src"
     })
     )
-    .pipe(gulp.dest("./dist"))
+    .pipe(gulp.dest("./dist/js"))
     .pipe(connect.reload());
 });
 
-gulp.task("build", ["build:js", "build:html"]);
+gulp.task("build", ["build:js", "build:html", "build:css"]);
 
-gulp.task("publish", function () {
-  var publisher = awspublish.create({
-    params: {
-      Bucket:
-        process.env.NODE_ENV === "production"
-          ? "static.whisbi.com"
-          : "frontend-pre"
-    },
-    region: "eu-west-1"
-  });
-
-  var headers = {
-    "Cache-Control": "max-age=300"
-  };
-
-  return (gulp
-    .src(["./dist/**"])
-    .pipe(
-    rename(function (path) {
-      path.dirname =
-        "/" +
-        scriptConfig.landingGuid +
-        "/EN" +
-        (path.dirname !== "." ? "/" + path.dirname : "");
-    })
-    )
-
-    // publisher will add Content-Length, Content-Type and headers specified above
-    // If not specified it will set x-amz-acl to public-read by default
-    .pipe(publisher.publish(headers))
-
-    // create a cache file to speed up consecutive uploads
-    .pipe(publisher.cache())
-
-    // print upload updates to console
-    .pipe(awspublish.reporter()));
-});
 
 gulp.task("connect", ["build"], function () {
   connect.server({
@@ -84,7 +46,9 @@ gulp.task("connect", ["build"], function () {
 });
 
 gulp.task("watch", function () {
-  gulp.watch(["./src/*.js"], ["build"]);
+  gulp.watch(["./src/js/*.js"], ["build"]);
+  gulp.watch(["./src/*.html"], ["build"]);
+  gulp.watch(["./src/css/*.css"], ["build"]);
 });
 
 gulp.task("default", ["connect", "watch"]);
