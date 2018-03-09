@@ -15,8 +15,14 @@ gulp.task("build:html", function () {
   return gulp.src("./src/index.html").pipe(gulp.dest("./dist"));
 });
 
-gulp.task("build:css", function () {
+gulp.task("build:css:index", function () {
   return gulp.src("./src/css/index.css").pipe(gulp.dest("./dist/css"));
+});
+gulp.task("build:css:assets", function () {
+  return gulp.src("./src/css/assets.css").pipe(gulp.dest("./dist/css"));
+});
+gulp.task("build:css:styles", function () {
+  return gulp.src("./src/css/styles.css").pipe(gulp.dest("./dist/css"));
 });
 
 gulp.task("build:js", function () {
@@ -33,6 +39,8 @@ gulp.task("build:js", function () {
     .pipe(gulp.dest("./dist/js"))
     .pipe(connect.reload());
 });
+
+gulp.task("build:css", ["build:css:index", "build:css:assets", "build:css:styles"]);
 
 gulp.task("build", ["build:js", "build:html", "build:css"]);
 
