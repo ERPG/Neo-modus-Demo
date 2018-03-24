@@ -137,9 +137,9 @@ gulp.task("connect", ["build"], function () {
 });
 
 gulp.task("watch", function () {
-  gulp.watch(["./src/js/*.js"], ["build"]);
-  gulp.watch(["./src/*.html"], ["build"]);
-  gulp.watch(["./src/css/*.css"], ["build"]);
+  gulp.watch(["./src/js/*.js"], ["build:js"]);
+  gulp.watch(['./src/*.hbs', './src/partials/*.hbs'], ["build:html"]);
+  gulp.watch(["./src/css/*.css"], ["build:css"]);
   gulp.watch(['./src/img/*'], ['build:assets']);
 });
 
