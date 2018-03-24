@@ -389,9 +389,17 @@
     padding-right: 30px;
   }
 }
-
+.moto-cell_logo-container {
+  position: absolute;
+  z-index: 2;
+}
+/* https://raw.githubusercontent.com/ERPG/Neo-modus-Demo/master/src/img/neo_logo_2.jpeg */
 .neo-modus_main-logo {
-  background-image: url('../img/neo_logo_2.jpg');
+  background-image: url('../img/neo_logo_2.jpeg');
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  display: inline-block;
 }
 .moto-container_content_56c707cf {
   margin-top: 0px;
@@ -649,25 +657,7 @@
   background-repeat: no-repeat;
 }
 .moto-container_header_56c6bfc7 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  background-color: #ffffff;
-  border-style: none;
-  border-color: #fff;
-  border-left-width: 0px;
-  border-right-width: 0px;
-  border-top-width: 0px;
-  border-bottom-width: 0px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  background: transparent;
 }
 .moto-container_content_56c6bfa26a72d {
   margin-top: 0px;
@@ -766,7 +756,7 @@
   padding-bottom: 0px;
   padding-left: 0px;
   padding-right: 0px;
-  background-color: #a5222b;
+  background-color: #111;
   border-style: none;
   border-color: #fff;
   border-left-width: 0px;
@@ -840,7 +830,7 @@
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  background-image: url('https://template58432.motopreview.com/mt-demo/58400/58432/mt-content/uploads/2016/02/mt-0346-home-parallax4.jpg');
+  background-image: url('../img/pexels-photo-97079.jpeg');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -938,7 +928,7 @@
   padding-bottom: 0px;
   padding-left: 0px;
   padding-right: 0px;
-  background-color: rgba(165,34,43,0.54);
+  background-color: rgba(255,255,255,0.21);
   border-style: solid;
   border-color: #ffffff;
   border-left-width: 6px;
@@ -951,26 +941,27 @@
   border-bottom-right-radius: 0px;
 }
 .moto-container_content_56c60aba {
-  margin-top: 0px;
+  /* margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 0px;
   padding-top: 0px;
   padding-bottom: 0px;
   padding-left: 0px;
-  padding-right: 0px;
+  padding-right: 0px; */
   background-color: transparent;
   border-style: none;
   border-color: #fff;
-  border-left-width: 0px;
+  /* border-left-width: 0px;
   border-right-width: 0px;
   border-top-width: 0px;
   border-bottom-width: 0px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  background-image: url('https://template58432.motopreview.com/mt-demo/58400/58432/mt-content/uploads/2016/02/mt-0346-home-parallax3.jpg');
+  border-bottom-right-radius: 0px; */
+  background-image: url('../img/pexels-photo-769892.jpeg');
+  height: 100vh;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -997,7 +988,7 @@
   border-bottom-right-radius: 0px;
 }
 .moto-container_content_56c6094c {
-  margin-top: 0px;
+  /* margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 0px;
@@ -1015,8 +1006,9 @@
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  background-image: url('https://template58432.motopreview.com/mt-demo/58400/58432/mt-content/uploads/2016/02/mt-0346-home-parallax2.jpg');
+  border-bottom-right-radius: 0px; */
+  background-image: url('../img/mercedes-benz-white-modern.jpg');
+  height: 100vh;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -1030,7 +1022,7 @@
   padding-bottom: 0px;
   padding-left: 0px;
   padding-right: 0px;
-  background-color: rgba(165,34,43,0.54);
+  background-color: rgba(41,41,41,0.54);;
   border-style: solid;
   border-color: #ffffff;
   border-left-width: 6px;
@@ -1062,31 +1054,14 @@
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  background-image: url('https://template58432.motopreview.com/mt-demo/58400/58432/mt-content/uploads/2016/02/mt-0346-home-parallax1.jpg');
+  background-image: url('../img/yuvraj-singh-425756-unsplash.jpg');
+  height: 100vh;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
 }
 .moto-container_header_56c1e50a {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  background-color: #ffffff;
-  border-style: none;
-  border-color: #fff;
-  border-left-width: 0px;
-  border-right-width: 0px;
-  border-top-width: 0px;
-  border-bottom-width: 0px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  background: transparent;
 }
 .moto-text_186 {
   font-weight: 400;
