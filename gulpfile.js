@@ -1,7 +1,6 @@
 var path = require('path');
 var gulp = require('gulp');
 var del = require('del');
-var csv2json = require('gulp-csv2json');
 var through = require('through2');
 var i18n = require('gulp-html-i18n');
 var connect = require('gulp-connect');
@@ -10,13 +9,13 @@ var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
 var rename = require('gulp-rename');
+var handlebarsCompiler = require('gulp-compile-handlebars');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var preprocess = require('gulp-preprocess');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
-var handlebars = require('handlebars');
 var awspublish = require('gulp-awspublish');
 var remoteSrc = require('gulp-remote-src');
 var babel = require('gulp-babel');
@@ -25,9 +24,29 @@ gulp.task("clean", function (cb) {
   del(["./dist"], cb);
 });
 
-gulp.task("build:html", function () {
-  return gulp.src("./src/index.html").pipe(gulp.dest("./dist"));
+gulp.task('build:handlebars', function () {
+  var templateData = {
+    firstName: 'Kaanon'
+  },
+    options = {
+      ignorePartials: false, //ignores the unknown footer2 partial in the handlebars template, defaults to false
+      batch: ['./src/partials'],
+      helpers: {
+        capitals: function (str) {
+          return str.toUpperCase();
+        }
+      }
+    }
+
+  return gulp.src('src/index.hbs')
+    .pipe(handlebarsCompiler(templateData, options))
+    .pipe(rename('index.html'))
+    .pipe(gulp.dest('dist/'));
 });
+
+gulp.task('build:html', [
+  'build:handlebars'
+]);
 
 gulp.task("build:css:index", function () {
   return gulp.src("./src/css/index.css").pipe(gulp.dest("./dist/css"));
@@ -38,6 +57,18 @@ gulp.task("build:css:assets", function () {
 gulp.task("build:css:styles", function () {
   return gulp.src("./src/css/styles.css").pipe(gulp.dest("./dist/css"));
 });
+
+gulp.task('build:css', [
+  'build:css:index',
+  'build:css:styles',
+  'build:css:assets'
+]);
+
+gulp.task('build:assets:images', function () {
+  return gulp.src(['./src/img/**']).pipe(gulp.dest('./dist/img'));
+});
+
+gulp.task('build:assets', ['build:assets:images']);
 
 // Generic function to process all JS
 function processJs(fileName) {
@@ -94,12 +125,6 @@ gulp.task('build:js', [
   'build:js:index'
 ]);
 
-gulp.task('build:css', [
-  'build:css:index',
-  'build:css:styles',
-  'build:css:assets'
-]);
-
 gulp.task("build", ["build:js", "build:html", "build:css"]);
 
 
@@ -115,6 +140,7 @@ gulp.task("watch", function () {
   gulp.watch(["./src/js/*.js"], ["build"]);
   gulp.watch(["./src/*.html"], ["build"]);
   gulp.watch(["./src/css/*.css"], ["build"]);
+  gulp.watch(['./src/img/*'], ['build:assets']);
 });
 
 gulp.task("default", ["connect", "watch"]);
