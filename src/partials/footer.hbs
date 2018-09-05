@@ -107,12 +107,12 @@
                                 data-preset="default" data-widget="contact_form" data-spacing="aasa">
                                 <div ng-controller="widget.ContactForm.Controller" ng-init="hash = '2@eyJoIjoiYUlnK0xyc1cyWGdlYUczMXRUZXRXUEM1cEtUeUZwMm4ycFowRyt5TjA5WT0iLCJpIjoiTHRJbmJhWHdKVUoxclBycnVsTUpuZz09IiwidiI6Imd2NTIzWjlHSDZPM1hcL05QZGNqUEppSFluU3ZwVWIzN2QyS2N4dmEzTkFBTDYrR0daV29SN0g3UjVIQ1pRZTJuNTlKUGFkakxYbzNCSVFWRGVMY3p1QT09In0='">
                                   {{!-- // =========== contact form =========== // --}}
-                                  <form id="moto-widget-contact_form-form" role="form" name="contactForm" method="POST">
+                                  <form id="moto-widget-contact_form-form" method="post">
                                     <div ng-show="sending" class="contact-form-loading"></div>
 
                                     <div class="moto-widget-contact_form-group">
                                       <label for="field_name" class="moto-widget-contact_form-label">NAME:</label>
-                                      <input type="text" class="moto-widget-contact_form-field moto-widget-contact_form-input" placeholder="NAME: *" ng-blur="validate('name')"
+                                      <input type="text" class="moto-widget-contact_form-field moto-widget-contact_form-input" name="Name" placeholder="NAME: *" ng-blur="validate('name')"
                                         required ng-model-options="{ updateOn: 'blur' }" name="name" id="field_name" ng-model="message.name"
                                       />
                                       <span class="moto-widget-contact_form-name-error ng-cloak">Field is required</span>
@@ -120,14 +120,14 @@
                                     </div>
                                     <div class="moto-widget-contact_form-group">
                                       <label for="field_email" class="moto-widget-contact_form-label">EMAIL:</label>
-                                      <input type="email" class="moto-widget-contact_form-field moto-widget-contact_form-input" placeholder="EMAIL: *" name="_replyto"
+                                      <input type="email" class="moto-widget-contact_form-field moto-widget-contact_form-input" name="Email" placeholder="EMAIL: *" name="_replyto"
                                         id="field_email" />
                                       <span class="moto-widget-contact_form-email-error ng-cloak">Field is required</span>
                                       <span class="moto-widget-contact_form-email-error ng-cloak">Incorrect email</span>
                                     </div>
                                     <div class="moto-widget-contact_form-group">
                                       <label for="field_phone" class="moto-widget-contact_form-label">PHONE:</label>
-                                      <input type="text" class="moto-widget-contact_form-field moto-widget-contact_form-input" placeholder="PHONE: " ng-model-options="{ updateOn: 'blur' }"
+                                      <input type="text" class="moto-widget-contact_form-field moto-widget-contact_form-input" name="Phone" placeholder="PHONE: " ng-model-options="{ updateOn: 'blur' }"
                                         name="phone" id="field_phone" ng-model="message.phone" />
                                       <span class="moto-widget-contact_form-phone-error ng-cloak">Field is required</span>
                                       <span class="moto-widget-contact_form-phone-error ng-cloak">Incorrect email</span>
@@ -139,6 +139,11 @@
                                         ng-model="message.message"></textarea>
                                       <span class="moto-widget-contact_form-message-error">Field is required</span>
                                     </div>
+                                    	<!-- CONFIG -->
+	                                    <input class="is-hidden" type="text" name="_gotcha">
+	                                    <input type="hidden" name="_subject" value="Subject">
+	                                    <input type="hidden" name="_cc" value="email@cc.com">
+	                                    <!-- /CONFIG -->
                                     <button type="submit" id="button-submit" class="moto-widget-contact_form-buttons" value="Send"></button>
                                   </form>
                                   {{!-- // =========== contact form =========== // --}}

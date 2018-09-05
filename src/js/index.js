@@ -4,8 +4,8 @@
     const contactForm = document.querySelector('#moto-widget-contact_form-form');
     const submit = contactForm.querySelector('#button-submit');
 
-    submit.addEventListener('click', (event) => {
-
+    // submit.addEventListener('click', (event) => {
+    $('#moto-widget-contact_form-form').submit((event) => {
       event.preventDefault();
 
       const name = $('#field_name').val();
@@ -40,19 +40,21 @@
       });
       if (name && email && phone && message) {
         console.log('Inside Ajax');
+        $.post('https://formspree.io/ernestopguardia@gmail.com', {name: name, email: email, message: message})
         // $.ajax({
-        //   url: "http://formspree.io/ernestopguardia@gmail.com",
-        //   method: "POST",
+        //   url: "https://formspree.io/ernestopguardia@gmail.com",
+        //   type: "POST",
         //   dataType: "json",
         //   crossDomain: true,
-        //   data: {
-        //     emailTitle: "Tienes una solicitud de informacion",
-        //     name: name,
-        //     phone: phone,
-        //     email: email,
-        //     date: Date.now(),
-        //     body: message,
-        //   },
+        //   // data: {
+        //   //   emailTitle: "Tienes una solicitud de informacion",
+        //   //   name: name,
+        //   //   phone: phone,
+        //   //   email: email,
+        //   //   date: Date.now(),
+        //   //   body: message,
+        //   // },
+        //   data: $(this).serialize(),
         //   success: function (result) {
         //     console.log('Email was sent');
         //     console.log(result);
@@ -64,30 +66,30 @@
         //   }
         // });
 
-        submit.value = 'Sending..';
+        // submit.value = 'Sending..';
 
-        let xhr = new XMLHttpRequest();
-        xhr.open('POST', '//formspree.io/ernestopguardia@gmail.com', true);
-        xhr.setRequestHeader("Accept", "application/json");
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        // let xhr = new XMLHttpRequest();
+        // xhr.open('POST', '//formspree.io/ernestopguardia@gmail.com', true);
+        // xhr.setRequestHeader("Accept", "application/json");
+        // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-        xhr.onloadend = function (res) {
-          console.log(res);
-          console.log('inside xhr');
-          if (res.target.status === 200) {
-            submit.value = 'Message sent!';
-          } else {
-            submit.value = 'Error!';
-          }
-        }
-        const data = {
-          date: Date.now(),
-          name: name,
-          phone: phone,
-          email: email,
-          message: message
-        }
-        xhr.send(data);
+        // xhr.onloadend = function (res) {
+        //   if (res.target.status === 200) {
+        //     submit.value = 'Message sent!';
+        //   } else {
+        //     submit.value = 'Error!';
+        //   }
+        // }
+
+        // const data = {
+        //   date: Date.now(),
+        //   name: name,
+        //   phone: phone,
+        //   email: email,
+        //   message: message
+        // }
+
+        // xhr.send(data);
       }
 
       // Reset Form
