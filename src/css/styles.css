@@ -6116,7 +6116,10 @@ body{
     display:none!important
 }
 .moto-widget{
-    position:relative
+    position:relative;
+}
+.moto-widget-row {
+    height: 100%;
 }
 .frame-empty,.moto-widget-cover{
     display:none

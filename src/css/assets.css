@@ -209,10 +209,14 @@
 .moto-bg-color_custom5 {
   background: #469fef;
 }
+
 @media screen and (min-width: 1039px) {
   .moto-parallax,
   .moto-background-fixed {
     background-attachment: fixed;
+  }
+  .moto-text_system_4 {
+    font-size: 60px;
   }
 }
 .moto-spacing-top-auto {
@@ -225,7 +229,7 @@
   padding-top: 10px;
 }
 .moto-spacing-top-medium {
-  padding-top: 50px;
+  padding-top: 0px;
 }
 .moto-spacing-top-large {
   padding-top: 135px;
@@ -395,7 +399,7 @@
 }
 /* https://raw.githubusercontent.com/ERPG/Neo-modus-Demo/master/src/img/neo_logo_2.jpeg */
 .neo-modus_main-logo {
-  background-image: url('../img/neo_logo_2.jpeg');
+  background-image: url('https://raw.githubusercontent.com/ERPG/Neo-modus-Demo/master/src/img/neo_logo_2.jpeg');
   background-repeat: no-repeat;
   height: 150px;
   width: 150px;
@@ -830,7 +834,7 @@
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  background-image: url('../img/pexels-photo-97079.jpeg');
+  background-image: url('https://raw.githubusercontent.com/ERPG/Neo-modus-Demo/master/src/img/pexels-photo-97079.jpeg');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -939,6 +943,7 @@
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  height: 80%;
 }
 .moto-container_content_56c60aba {
   /* margin-top: 0px;
@@ -960,7 +965,7 @@
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px; */
-  background-image: url('../img/pexels-photo-769892.jpeg');
+  background-image: url('https://raw.githubusercontent.com/ERPG/Neo-modus-Demo/master/src/img/pexels-photo-769892.jpeg');
   height: 100vh;
   background-size: cover;
   background-position: center top;
@@ -986,6 +991,7 @@
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  height: 80%;
 }
 .moto-container_content_56c6094c {
   /* margin-top: 0px;
@@ -1007,7 +1013,7 @@
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px; */
-  background-image: url('../img/mercedes-benz-white-modern.jpg');
+  background-image: url('https://raw.githubusercontent.com/ERPG/Neo-modus-Demo/master/src/img/mercedes-benz-white-modern.jpg');
   height: 100vh;
   background-size: cover;
   background-position: center top;
@@ -1054,7 +1060,7 @@
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  background-image: url('../img/yuvraj-singh-425756-unsplash.jpg');
+  background-image: url('https://raw.githubusercontent.com/ERPG/Neo-modus-Demo/master/src/img/yuvraj-singh-425756-unsplash.jpg');
   height: 100vh;
   background-size: cover;
   background-position: center top;
@@ -1662,7 +1668,8 @@
   font-style: normal;
   font-family: 'Raleway', sans-serif;
   color: #ffffff;
-  font-size: 107px;
+  /* font-size: 107px; */
+  font-size: 5.5em;
   line-height: 1.2;
   letter-spacing: 0px;
 }
@@ -1828,6 +1835,7 @@
 .moto-widget-text ul li {
   position: relative;
   padding: 0 0 0 17px;
+  display: inline-block;
 }
 .moto-widget-text ul li:before {
   content: '\f101';
@@ -2352,7 +2360,7 @@
 .moto-widget-contact_form .moto-widget-contact_form-danger {
   position: relative;
 }
-.moto-widget-contact_form .moto-widget-contact_form-form {
+.moto-widget-contact_form #moto-widget-contact_form-form {
   border: 1px solid;
 }
 .moto-widget-contact_form .moto-widget-contact_form-label {
@@ -2401,6 +2409,7 @@
 .moto-widget-contact_form .moto-widget-contact_form-buttons {
   margin-top: 10px;
 }
+
 .moto-widget-contact_form.moto-preset-2 .moto-widget-contact_form-group .moto-widget-contact_form-field {
   border: none;
   border-bottom: 2px solid;
@@ -3143,157 +3152,157 @@
 .moto-widget-grid-gallery.moto-preset-3 .moto-widget-grid-gallery-item:hover:after {
   color: transparent;
 }
-.moto-widget-contact_form.moto-preset-default .moto-widget-contact_form-form {
+.moto-widget-contact_form.moto-preset-default #moto-widget-contact_form-form {
   font-family: 'Raleway', sans-serif;
   background-color: transparent;
   border-color: transparent;
 }
-.moto-widget-contact_form.moto-preset-default .moto-widget-contact_form-form .moto-widget-contact_form-field {
+.moto-widget-contact_form.moto-preset-default #moto-widget-contact_form-form .moto-widget-contact_form-field {
   color: #ffffff;
   background-color: rgba(0,0,0,0.26);
   font-style: normal;
   font-weight: 600;
   border-color: rgba(255,255,255,0.26);
 }
-.moto-widget-contact_form.moto-preset-default .moto-widget-contact_form-form .moto-widget-contact_form-field.ng-touched.ng-invalid {
+.moto-widget-contact_form.moto-preset-default #moto-widget-contact_form-form .moto-widget-contact_form-field.ng-touched.ng-invalid {
   color: #ffffff;
   background-color: rgba(0,0,0,0.26);
   border-color: #c7664e;
 }
-.moto-widget-contact_form.moto-preset-default .moto-widget-contact_form-form .moto-widget-contact_form-field::-webkit-input-placeholder {
+.moto-widget-contact_form.moto-preset-default #moto-widget-contact_form-form .moto-widget-contact_form-field::-webkit-input-placeholder {
   color: #ffffff;
 }
-.moto-widget-contact_form.moto-preset-default .moto-widget-contact_form-form .moto-widget-contact_form-field::-moz-placeholder {
+.moto-widget-contact_form.moto-preset-default #moto-widget-contact_form-form .moto-widget-contact_form-field::-moz-placeholder {
   color: #ffffff;
 }
-.moto-widget-contact_form.moto-preset-default .moto-widget-contact_form-form .moto-widget-contact_form-field:-ms-input-placeholder {
+.moto-widget-contact_form.moto-preset-default #moto-widget-contact_form-form .moto-widget-contact_form-field:-ms-input-placeholder {
   color: #ffffff;
 }
-.moto-widget-contact_form.moto-preset-default .moto-widget-contact_form-form .moto-widget-contact_form-field-error {
+.moto-widget-contact_form.moto-preset-default #moto-widget-contact_form-form .moto-widget-contact_form-field-error {
   font-style: normal;
   font-weight: 300;
   color: #c7664e;
 }
-.moto-widget-contact_form.moto-preset-default .moto-widget-contact_form-form .moto-widget-contact_form-success {
+.moto-widget-contact_form.moto-preset-default #moto-widget-contact_form-form .moto-widget-contact_form-success {
   font-style: normal;
   font-weight: 300;
   color: #9ecd4e;
 }
-.moto-widget-contact_form.moto-preset-default .moto-widget-contact_form-form .moto-widget-contact_form-danger {
+.moto-widget-contact_form.moto-preset-default #moto-widget-contact_form-form .moto-widget-contact_form-danger {
   font-style: normal;
   font-weight: 300;
   color: #c7664e;
 }
-.moto-widget-contact_form.moto-preset-default .moto-widget-contact_form-form .moto-widget-contact_form-checkbox-icon {
+.moto-widget-contact_form.moto-preset-default #moto-widget-contact_form-form .moto-widget-contact_form-checkbox-icon {
   width: 16px;
   height: 16px;
   font-size: 16px;
   border-color: #81868c;
   color: #55616d;
 }
-.moto-widget-contact_form.moto-preset-default .moto-widget-contact_form-form .moto-widget-contact_form-group-not-valid .moto-widget-contact_form-checkbox-icon {
+.moto-widget-contact_form.moto-preset-default #moto-widget-contact_form-form .moto-widget-contact_form-group-not-valid .moto-widget-contact_form-checkbox-icon {
   border-color: #ff0000;
 }
-.moto-widget-contact_form.moto-preset-2 .moto-widget-contact_form-form {
+.moto-widget-contact_form.moto-preset-2 #moto-widget-contact_form-form {
   font-family: 'Raleway', sans-serif;
   background-color: transparent;
   border-color: transparent;
 }
-.moto-widget-contact_form.moto-preset-2 .moto-widget-contact_form-form .moto-widget-contact_form-field {
+.moto-widget-contact_form.moto-preset-2 #moto-widget-contact_form-form .moto-widget-contact_form-field {
   color: #ffffff;
   background-color: transparent;
   font-style: normal;
   font-weight: 300;
   border-color: #ffffff;
 }
-.moto-widget-contact_form.moto-preset-2 .moto-widget-contact_form-form .moto-widget-contact_form-field.ng-touched.ng-invalid {
+.moto-widget-contact_form.moto-preset-2 #moto-widget-contact_form-form .moto-widget-contact_form-field.ng-touched.ng-invalid {
   color: #ffffff;
   background-color: transparent;
   border-color: #c7664e;
 }
-.moto-widget-contact_form.moto-preset-2 .moto-widget-contact_form-form .moto-widget-contact_form-field::-webkit-input-placeholder {
+.moto-widget-contact_form.moto-preset-2 #moto-widget-contact_form-form .moto-widget-contact_form-field::-webkit-input-placeholder {
   color: #ffffff;
 }
-.moto-widget-contact_form.moto-preset-2 .moto-widget-contact_form-form .moto-widget-contact_form-field::-moz-placeholder {
+.moto-widget-contact_form.moto-preset-2 #moto-widget-contact_form-form .moto-widget-contact_form-field::-moz-placeholder {
   color: #ffffff;
 }
-.moto-widget-contact_form.moto-preset-2 .moto-widget-contact_form-form .moto-widget-contact_form-field:-ms-input-placeholder {
+.moto-widget-contact_form.moto-preset-2 #moto-widget-contact_form-form .moto-widget-contact_form-field:-ms-input-placeholder {
   color: #ffffff;
 }
-.moto-widget-contact_form.moto-preset-2 .moto-widget-contact_form-form .moto-widget-contact_form-field-error {
+.moto-widget-contact_form.moto-preset-2 #moto-widget-contact_form-form .moto-widget-contact_form-field-error {
   font-style: normal;
   font-weight: 300;
   color: #c7664e;
 }
-.moto-widget-contact_form.moto-preset-2 .moto-widget-contact_form-form .moto-widget-contact_form-success {
+.moto-widget-contact_form.moto-preset-2 #moto-widget-contact_form-form .moto-widget-contact_form-success {
   font-style: normal;
   font-weight: 300;
   color: #a5222b;
 }
-.moto-widget-contact_form.moto-preset-2 .moto-widget-contact_form-form .moto-widget-contact_form-danger {
+.moto-widget-contact_form.moto-preset-2 #moto-widget-contact_form-form .moto-widget-contact_form-danger {
   font-style: normal;
   font-weight: 300;
   color: #c7664e;
 }
-.moto-widget-contact_form.moto-preset-2 .moto-widget-contact_form-form .moto-widget-contact_form-checkbox-icon {
+.moto-widget-contact_form.moto-preset-2 #moto-widget-contact_form-form .moto-widget-contact_form-checkbox-icon {
   width: 16px;
   height: 16px;
   font-size: 16px;
   border-color: #81868c;
   color: #55616d;
 }
-.moto-widget-contact_form.moto-preset-2 .moto-widget-contact_form-form .moto-widget-contact_form-group-not-valid .moto-widget-contact_form-checkbox-icon {
+.moto-widget-contact_form.moto-preset-2 #moto-widget-contact_form-form .moto-widget-contact_form-group-not-valid .moto-widget-contact_form-checkbox-icon {
   border-color: #ff0000;
 }
-.moto-widget-contact_form.moto-preset-3 .moto-widget-contact_form-form {
+.moto-widget-contact_form.moto-preset-3 #moto-widget-contact_form-form {
   font-family: 'Raleway', sans-serif;
   background-color: transparent;
   border-color: transparent;
 }
-.moto-widget-contact_form.moto-preset-3 .moto-widget-contact_form-form .moto-widget-contact_form-field {
+.moto-widget-contact_form.moto-preset-3 #moto-widget-contact_form-form .moto-widget-contact_form-field {
   color: #000000;
   background-color: transparent;
   font-style: normal;
   font-weight: 300;
   border-color: #777777;
 }
-.moto-widget-contact_form.moto-preset-3 .moto-widget-contact_form-form .moto-widget-contact_form-field.ng-touched.ng-invalid {
+.moto-widget-contact_form.moto-preset-3 #moto-widget-contact_form-form .moto-widget-contact_form-field.ng-touched.ng-invalid {
   color: #000000;
   background-color: transparent;
   border-color: #c7664e;
 }
-.moto-widget-contact_form.moto-preset-3 .moto-widget-contact_form-form .moto-widget-contact_form-field::-webkit-input-placeholder {
+.moto-widget-contact_form.moto-preset-3 #moto-widget-contact_form-form .moto-widget-contact_form-field::-webkit-input-placeholder {
   color: #000000;
 }
-.moto-widget-contact_form.moto-preset-3 .moto-widget-contact_form-form .moto-widget-contact_form-field::-moz-placeholder {
+.moto-widget-contact_form.moto-preset-3 #moto-widget-contact_form-form .moto-widget-contact_form-field::-moz-placeholder {
   color: #000000;
 }
-.moto-widget-contact_form.moto-preset-3 .moto-widget-contact_form-form .moto-widget-contact_form-field:-ms-input-placeholder {
+.moto-widget-contact_form.moto-preset-3 #moto-widget-contact_form-form .moto-widget-contact_form-field:-ms-input-placeholder {
   color: #000000;
 }
-.moto-widget-contact_form.moto-preset-3 .moto-widget-contact_form-form .moto-widget-contact_form-field-error {
+.moto-widget-contact_form.moto-preset-3 #moto-widget-contact_form-form .moto-widget-contact_form-field-error {
   font-style: normal;
   font-weight: 300;
   color: #c7664e;
 }
-.moto-widget-contact_form.moto-preset-3 .moto-widget-contact_form-form .moto-widget-contact_form-success {
+.moto-widget-contact_form.moto-preset-3 #moto-widget-contact_form-form .moto-widget-contact_form-success {
   font-style: normal;
   font-weight: 300;
   color: #a5222b;
 }
-.moto-widget-contact_form.moto-preset-3 .moto-widget-contact_form-form .moto-widget-contact_form-danger {
+.moto-widget-contact_form.moto-preset-3 #moto-widget-contact_form-form .moto-widget-contact_form-danger {
   font-style: normal;
   font-weight: 300;
   color: #c7664e;
 }
-.moto-widget-contact_form.moto-preset-3 .moto-widget-contact_form-form .moto-widget-contact_form-checkbox-icon {
+.moto-widget-contact_form.moto-preset-3 #moto-widget-contact_form-form .moto-widget-contact_form-checkbox-icon {
   width: 16px;
   height: 16px;
   font-size: 16px;
   border-color: #81868c;
   color: #55616d;
 }
-.moto-widget-contact_form.moto-preset-3 .moto-widget-contact_form-form .moto-widget-contact_form-group-not-valid .moto-widget-contact_form-checkbox-icon {
+.moto-widget-contact_form.moto-preset-3 #moto-widget-contact_form-form .moto-widget-contact_form-group-not-valid .moto-widget-contact_form-checkbox-icon {
   border-color: #ff0000;
 }
 .moto-widget-menu.moto-preset-default .moto-widget-menu-list {
@@ -4507,4 +4516,16 @@
 .row {
   margin-left: -15px;
   margin-right: -15px;
+}
+
+/* ========== MEDIA QUERIES ======== */
+
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
+  .moto-parallax,
+  .moto-background-fixed {
+    background-attachment: fixed;
+  }
+  .moto-text_system_4 {
+    font-size: 70px;
+  }
 }

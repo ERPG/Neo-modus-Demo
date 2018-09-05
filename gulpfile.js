@@ -52,7 +52,7 @@ gulp.task("build:css:index", function () {
   return gulp.src("./src/css/index.css").pipe(gulp.dest("./dist/css"));
 });
 gulp.task("build:css:assets", function () {
-  return gulp.src("./src/css/assets.css").pipe(gulp.dest("./dist/css"));
+  return gulp.src("./src/img/assets.css").pipe(gulp.dest("./dist/css"));
 });
 gulp.task("build:css:styles", function () {
   return gulp.src("./src/css/styles.css").pipe(gulp.dest("./dist/css"));

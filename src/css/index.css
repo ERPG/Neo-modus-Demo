@@ -1143,3 +1143,17 @@ hr{
  .row-fixed .container-fluid {
      max-width: 1815px;
 }
+
+button.moto-widget-contact_form-buttons {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #ffffff;
+  background-color: #a5222b;
+  border-color: transparent;
+  padding: 15px 22px;
+  line-height: 30px;
+  font-size: 1.2em;
+  height: 20px;
+  width: 40px;
+}

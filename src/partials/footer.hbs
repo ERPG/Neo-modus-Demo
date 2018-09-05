@@ -106,55 +106,42 @@
                               <div data-widget-id="wid__contact_form__5aa2dea76376e" class="moto-widget moto-widget-contact_form moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  "
                                 data-preset="default" data-widget="contact_form" data-spacing="aasa">
                                 <div ng-controller="widget.ContactForm.Controller" ng-init="hash = '2@eyJoIjoiYUlnK0xyc1cyWGdlYUczMXRUZXRXUEM1cEtUeUZwMm4ycFowRyt5TjA5WT0iLCJpIjoiTHRJbmJhWHdKVUoxclBycnVsTUpuZz09IiwidiI6Imd2NTIzWjlHSDZPM1hcL05QZGNqUEppSFluU3ZwVWIzN2QyS2N4dmEzTkFBTDYrR0daV29SN0g3UjVIQ1pRZTJuNTlKUGFkakxYbzNCSVFWRGVMY3p1QT09In0='">
-
-                                  <form class="moto-widget-contact_form-form" role="form" name="contactForm" ng-submit="submit()" novalidate>
+                                  {{!-- // =========== contact form =========== // --}}
+                                  <form id="moto-widget-contact_form-form" role="form" name="contactForm" method="POST">
                                     <div ng-show="sending" class="contact-form-loading"></div>
-
-
 
                                     <div class="moto-widget-contact_form-group">
                                       <label for="field_name" class="moto-widget-contact_form-label">NAME:</label>
                                       <input type="text" class="moto-widget-contact_form-field moto-widget-contact_form-input" placeholder="NAME: *" ng-blur="validate('name')"
                                         required ng-model-options="{ updateOn: 'blur' }" name="name" id="field_name" ng-model="message.name"
                                       />
-                                      <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak ng-show="contactForm.name.$invalid && !contactForm.name.$pristine && !contactForm.name.emailInvalid">Field is required</span>
-                                      <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak ng-show="contactForm.name.emailInvalid && !contactForm.name.$pristine">Incorrect email</span>
+                                      <span class="moto-widget-contact_form-name-error ng-cloak">Field is required</span>
+                                      <span class="moto-widget-contact_form-name-error ng-cloak">Incorrect email</span>
                                     </div>
                                     <div class="moto-widget-contact_form-group">
                                       <label for="field_email" class="moto-widget-contact_form-label">EMAIL:</label>
-                                      <input type="text" class="moto-widget-contact_form-field moto-widget-contact_form-input" placeholder="EMAIL: *" ng-blur="validate('email')"
-                                        required ng-model-options="{ updateOn: 'blur' }" name="email" id="field_email" ng-model="message.email"
-                                      />
-                                      <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak ng-show="contactForm.email.$invalid && !contactForm.email.$pristine && !contactForm.email.emailInvalid">Field is required</span>
-                                      <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak ng-show="contactForm.email.emailInvalid && !contactForm.email.$pristine">Incorrect email</span>
+                                      <input type="email" class="moto-widget-contact_form-field moto-widget-contact_form-input" placeholder="EMAIL: *" name="_replyto"
+                                        id="field_email" />
+                                      <span class="moto-widget-contact_form-email-error ng-cloak">Field is required</span>
+                                      <span class="moto-widget-contact_form-email-error ng-cloak">Incorrect email</span>
                                     </div>
                                     <div class="moto-widget-contact_form-group">
                                       <label for="field_phone" class="moto-widget-contact_form-label">PHONE:</label>
                                       <input type="text" class="moto-widget-contact_form-field moto-widget-contact_form-input" placeholder="PHONE: " ng-model-options="{ updateOn: 'blur' }"
                                         name="phone" id="field_phone" ng-model="message.phone" />
-                                      <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak ng-show="contactForm.phone.$invalid && !contactForm.phone.$pristine && !contactForm.phone.emailInvalid">Field is required</span>
-                                      <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak ng-show="contactForm.phone.emailInvalid && !contactForm.phone.$pristine">Incorrect email</span>
+                                      <span class="moto-widget-contact_form-phone-error ng-cloak">Field is required</span>
+                                      <span class="moto-widget-contact_form-phone-error ng-cloak">Incorrect email</span>
                                     </div>
                                     <div class="moto-widget-contact_form-group">
                                       <label for="field_message" class="moto-widget-contact_form-label">MESSAGE:</label>
                                       <textarea class="moto-widget-contact_form-field moto-widget-contact_form-textarea" rows="3" placeholder="MESSAGE: *" ng-blur="validate('message')"
                                         required ng-model-options="{ updateOn: 'blur' }" name="message" id="field_message"
                                         ng-model="message.message"></textarea>
-                                      <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak ng-show="contactForm.message.$invalid && !contactForm.message.$pristine">Field is required</span>
+                                      <span class="moto-widget-contact_form-message-error">Field is required</span>
                                     </div>
-                                    <div class="moto-widget-contact_form-buttons">
-                                      <div class="moto-widget moto-widget-button moto-preset-default moto-align-left" data-preset="default" data-align="left">
-                                        <a ng-click="submit();" class="moto-widget-button-link moto-size-medium" data-size="medium">
-                                          <span class="fa moto-widget-theme-icon"></span>
-                                          <span class="moto-widget-button-label">SEND</span>
-                                        </a>
-                                      </div>
-                                      <button type="submit" class="hidden"></button>
-
-
-                                    </div>
-
+                                    <button type="submit" id="button-submit" class="moto-widget-contact_form-buttons" value="Send"></button>
                                   </form>
+                                  {{!-- // =========== contact form =========== // --}}
                                 </div>
                               </div>
                               <div class="moto-widget moto-widget-spacer moto-preset-default                             moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto"
